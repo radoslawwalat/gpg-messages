@@ -72,6 +72,30 @@ class Users extends Model {
             throw error;
         }
     }
+
+    static async getUsersByIds(userIds: number[]): Promise<Users[]> {
+        try {
+            const users = await Users.query().whereIn('id', userIds);
+            return users;
+        } catch (error) {
+            console.error("Error getting users by IDs:", error);
+            throw error; // It's often better to throw the error to let the caller handle it
+        }
+    }
+
+    static async getPublicKeysByIds(userIds: number[]): Promise<(string)[]> {
+        try {
+            const users = await Users.query().select('public_key').whereIn('id', userIds);
+            // Extract public_key values from the user objects
+            const publicKeys = users.map(user => user.public_key);
+            // @ts-ignore
+            return publicKeys;
+        } catch (error) {
+            console.error("Error getting users' public keys by IDs:", error);
+            throw error; // It's important to throw the error to let the caller handle it
+        }
+    }
+
 }
 
 export default Users;
