@@ -5,7 +5,6 @@ export async function seed(knex: Knex): Promise<void> {
     const users = [
         {
             username: "1radwal1",
-            create_date: "01.09.1939",
             public_key: "-----BEGIN PGP PUBLIC KEY BLOCK-----\n" +
                 "\n" +
                 "mQINBGW+dEcBEAC3wMRATbNTi+0ytvNPD8kzbxuoRVpjmlBlanPqkO+iIEh5lY4P\n" +
@@ -57,10 +56,17 @@ export async function seed(knex: Knex): Promise<void> {
                 "fyRxohEBTdrtCyr6pcxCnnGEDtxx/x2stoPmqrOLZH6K7x8oKi3taolKa0iPuA2p\n" +
                 "nlJX1lIVUAgItoLQ\n" +
                 "=qu/d\n" +
+                "-----END PGP PUBLIC KEY BLOCK-----",
+            password: "7509e76494c4692734006087878aca4117904823fe7fe8f188ee04512b804a8c",
+            salt: "jcVDAA+oGFamBEHY4AIAgbIYmz1zJy8y5yQKa/VHnf/yksEsjtPRCGv2zC1NWwD5MdK93xbW3IGYvsRA4Q3PoiFRQ/I5U5Bi1gQYCYbZTFHbfao7RJpbV2irnBUoMMrvubrm9hNluuCsrBuA6erzCkktSZ92PxJyRe1tMRTvOj4="
+        },
+        {
+            username: "paxters",
+            password: "fcdae15b26538105bea308566864583974198ef7607a97666f501735a89eec5a",
+            salt: "iZ55TYnE0UcWJb+P+DdDwTNMH4KMmp+TyuItSYm8Sg+DhE+64VuyrEGY3KMW46cKwPPpK8MX/5dyDzdSzeE8dZRkoFaLDiUCi4znrKP8skXOWROOXHiGJ20MKBxQ7l8cYPiHIzAcrfcPMxtgti/b5qzmjHaQuoQCgUewo/EowUI="
                 "-----END PGP PUBLIC KEY BLOCK-----"
         }, {
             username: "paxters",
-            create_date: "01.01.0001",
             public_key: "-----BEGIN PGP PUBLIC KEY BLOCK-----\n" +
                 "\n" +
                 "mQINBGW/oNoBEACdVLOCkzNQ9wKN2CIq+cT1hZ0XZ1CVyGGCNkEi5/lrfjsR9f69\n" +
