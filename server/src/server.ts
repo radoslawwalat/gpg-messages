@@ -1,6 +1,4 @@
 import dotenv from "dotenv";
-import mysql from "mysql2";
-import router from "./router";
 import {app} from "./app";
 dotenv.config();
 
