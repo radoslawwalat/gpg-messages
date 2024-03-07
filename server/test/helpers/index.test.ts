@@ -1,4 +1,4 @@
-import {authentication, generateSessionToken, random} from "./index";
+import {authentication, generateSessionToken, random} from "../../src/helpers";
 import jwt from "jsonwebtoken";
 import process from "process";
 
