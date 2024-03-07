@@ -1,2 +1,2 @@
 # gpg-messages
-Python app for encrypting messages to friends using gpg. 
+React Express app for encrypting messages to friends using gpg. 
