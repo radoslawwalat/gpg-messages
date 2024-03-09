@@ -8,7 +8,7 @@ export async function up(knex: Knex): Promise<void> {
         table.dateTime('create_date').defaultTo(knex.fn.now());
         table.string('password', 255).notNullable().notNullable();
         table.string('salt', 255).notNullable();
-        table.string('sessionToken', 255).nullable().defaultTo(null);
+        table.string('session_token', 255).nullable().defaultTo(null);
     });
 }
 
